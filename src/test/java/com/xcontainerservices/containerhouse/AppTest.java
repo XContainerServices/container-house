@@ -1,4 +1,4 @@
-package com.xcontainerservices.saas;
+package com.xcontainerservices.containerhouse;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
