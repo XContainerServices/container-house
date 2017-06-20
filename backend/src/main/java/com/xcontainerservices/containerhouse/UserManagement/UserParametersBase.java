@@ -1,14 +1,18 @@
 package com.xcontainerservices.containerhouse.UserManagement;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table( name = "UserDetails" )
 public class UserParametersBase {
 
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     private int uid;
     private String username;
     private String password;

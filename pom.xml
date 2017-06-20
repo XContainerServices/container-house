@@ -34,6 +34,21 @@
     	<artifactId>hibernate-c3p0</artifactId>
     	<version>5.2.10.Final</version>
     </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-search-orm</artifactId>
+    	<version>5.8.0.Beta3</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-search</artifactId>
+    	<version>5.8.0.Beta3</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-search-infinispan</artifactId>
+    	<version>5.8.0.Beta3</version>
+    </dependency>
   </dependencies>
   <scm>
   	<url>https://github.com/XContainerServices/container-house</url>

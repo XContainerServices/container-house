@@ -18,13 +18,12 @@ public class CreateUserBase {
 
 	    //openning session to store value in database
 	    setInDb();
+
 	}
 
     private void setInDb() {
-        
-    	Session session = HibernateUtil.getSessionFactory().openSession();
-		Transaction tx=session.beginTransaction();
-
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx=session.beginTransaction();
 		UserParametersBase user = new UserParametersBase();
 		setParameters(user);
 		session.save(user);
@@ -34,7 +33,6 @@ public class CreateUserBase {
     }
 
     private void setParameters(UserParametersBase user) {
-
         user.setUsername(username);
         user.setPassword(password);
         user.setIsAdmin(isAdmin);
