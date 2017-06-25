@@ -49,6 +49,11 @@
     	<artifactId>hibernate-search-infinispan</artifactId>
     	<version>5.8.0.Beta3</version>
     </dependency>
+    <dependency>
+    	<groupId>com.github.docker-java</groupId>
+    	<artifactId>docker-java</artifactId>
+    	<version>3.0.10</version>
+    </dependency>
   </dependencies>
   <scm>
   	<url>https://github.com/XContainerServices/container-house</url>
