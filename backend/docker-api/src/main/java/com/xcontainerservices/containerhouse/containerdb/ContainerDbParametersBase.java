@@ -19,7 +19,7 @@ public class ContainerDbParametersBase {
 	private String frontendName;
 	private String continerId;
 	private String storgeDomainName;
-	private String StorageName;
+	private String storageName;
 
 	public String getUsername() {
 		return username;
@@ -52,10 +52,10 @@ public class ContainerDbParametersBase {
 		this.storgeDomainName = storgeDomainName;
 	}
 	public String getStorageName() {
-		return StorageName;
+		return storageName;
 	}
 	public void setStorageName(String storageName) {
-		StorageName = storageName;
+		this.storageName = storageName;
 	}
 
 }
