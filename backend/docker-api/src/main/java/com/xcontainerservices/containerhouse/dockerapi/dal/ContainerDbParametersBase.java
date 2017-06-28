@@ -1,4 +1,4 @@
-package com.xcontainerservices.containerhouse.containerdb;
+package com.xcontainerservices.containerhouse.dockerapi.dal;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
