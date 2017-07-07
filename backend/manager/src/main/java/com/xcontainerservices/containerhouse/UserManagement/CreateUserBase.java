@@ -11,24 +11,24 @@ public class CreateUserBase {
     private String password;
     private boolean isAdmin;
 
-	public CreateUserBase(String username, String password, boolean isAdmin) {
-	    this.username = username;
-	    this.password = password;
-	    this.isAdmin = isAdmin;
+    public CreateUserBase(String username, String password, boolean isAdmin) {
+        this.username = username;
+        this.password = password;
+        this.isAdmin = isAdmin;
 
-	    //openning session to store value in database
-	    setInDb();
+        // openning session to store value in database
+        setInDb();
 
-	}
+    }
 
     private void setInDb() {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction tx=session.beginTransaction();
-		UserParametersBase user = new UserParametersBase();
-		setParameters(user);
-		session.save(user);
-		tx.commit();
-		session.close();
+        Transaction tx = session.beginTransaction();
+        UserParametersBase user = new UserParametersBase();
+        setParameters(user);
+        session.save(user);
+        tx.commit();
+        session.close();
 
     }
 
