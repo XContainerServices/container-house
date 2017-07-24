@@ -8,16 +8,15 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "ContainerDetails")
-public class ContainerDbParametersBase {
+@Table(name = "ImageDetails")
+public class ImageDbParametersBase {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
     private int uid;
     private String username;
-    private String containerName;
-    private String frontendName;
-    private String continerId;
+    private String imageName;
+    private String imageId;
     private String storgeDomainName;
     private String storageName;
 
@@ -29,28 +28,20 @@ public class ContainerDbParametersBase {
         this.username = username;
     }
 
-    public String getContainerName() {
-        return containerName;
+    public String getImageName() {
+        return imageName;
     }
 
-    public void setContainerName(String containerName) {
-        this.containerName = containerName;
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 
-    public String getFrontendName() {
-        return frontendName;
+    public String getImageId() {
+        return imageId;
     }
 
-    public void setFrontendName(String frontendName) {
-        this.frontendName = frontendName;
-    }
-
-    public String getContinerId() {
-        return continerId;
-    }
-
-    public void setContinerId(String continerId) {
-        this.continerId = continerId;
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
     }
 
     public String getStorgeDomainName() {

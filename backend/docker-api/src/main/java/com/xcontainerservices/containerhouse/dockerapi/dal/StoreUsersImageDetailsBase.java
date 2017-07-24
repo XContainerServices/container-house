@@ -4,25 +4,22 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import com.xcontainerservices.containerhouse.utils.HibernateUtil;
 
-public class StoreContainerDetailsBase {
+public class StoreUsersImageDetailsBase {
 
     private String username;
-    private String containerName;
-    private String frontendName;
-    private String continerId;
+    private String imageName;
+    private String imageId;
     private String storgeDomainName;
     private String storageName;
 
-    public StoreContainerDetailsBase(String username,
-            String containerName,
-            String frontendName,
-            String continerId,
+    public StoreUsersImageDetailsBase(String username,
+            String imageName,
+            String imageId,
             String storgeDomainName,
             String storageName) {
         this.username = username;
-        this.containerName = containerName;
-        this.frontendName = frontendName;
-        this.continerId = continerId;
+        this.imageName = imageName;
+        this.imageId = imageId;
         this.storgeDomainName = storgeDomainName;
         this.storageName = storageName;
         setInDb();
@@ -32,7 +29,7 @@ public class StoreContainerDetailsBase {
     private void setInDb() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        ContainerDbParametersBase container = new ContainerDbParametersBase();
+        ImageDbParametersBase container = new ImageDbParametersBase();
         setParameters(container);
         session.save(container);
         tx.commit();
@@ -40,11 +37,10 @@ public class StoreContainerDetailsBase {
 
     }
 
-    private void setParameters(ContainerDbParametersBase container) {
+    private void setParameters(ImageDbParametersBase container) {
         container.setUsername(username);
-        container.setContainerName(containerName);
-        container.setFrontendName(frontendName);
-        container.setContinerId(continerId);
+        container.setImageName(imageName);
+        container.setImageId(imageId);
         container.setStorgeDomainName(storgeDomainName);
         container.setStorageName(storageName);
 

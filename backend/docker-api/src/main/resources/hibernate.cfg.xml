@@ -31,7 +31,7 @@
         <property name="hibernate.current_session_context_class">thread</property>
 
         <!-- Use these files for mapping configuration -->
-        <mapping class="com.xcontainerservices.containerhouse.containerdb.ContainerDbParametersBase"/>
+        <mapping class="com.xcontainerservices.containerhouse.dockerapi.dal.ImageDbParametersBase"/>
 
     </session-factory>
 </hibernate-configuration>
